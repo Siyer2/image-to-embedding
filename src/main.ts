@@ -1,7 +1,6 @@
 import jimp from 'jimp';
 import * as mobilenet from '@tensorflow-models/mobilenet';
 import * as tf from '@tensorflow/tfjs-node';
-
 import { Embedding } from './types';
 
 let model: mobilenet.MobileNet;
@@ -22,7 +21,7 @@ async function preprocessBuffer(imageToConvert: Buffer): Promise<Buffer> {
   return await processedImage.getBufferAsync(jimp.MIME_JPEG);
 }
 
-async function convertToEmbedding(processedImage: Buffer): Promise<Embedding> {
+async function convertToEmbedding(processedImage: Buffer) {
   const tensorInput = tf.node.decodeImage(processedImage).expandDims();
 
   model = model || (await mobilenet.load());

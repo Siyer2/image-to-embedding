@@ -1,1 +1,1 @@
-export type Embedding = number[];
+export type Embedding = number[][];
