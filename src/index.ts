@@ -1,1 +1,5 @@
-export const myPackage = (taco = ''): string => `${taco} from my package`;
+import { convertBufferToEmbedding } from './main';
+import { Embedding } from './types';
+
+export const convertFromBuffer = (imageToConvert: Buffer): Promise<Embedding> =>
+  convertBufferToEmbedding(imageToConvert);
