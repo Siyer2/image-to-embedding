@@ -1,5 +1,6 @@
 import { convertBufferToEmbedding } from './main';
 import { Embedding } from './types';
 
-export const convertFromBuffer = (imageToConvert: Buffer): Promise<Embedding> =>
-  convertBufferToEmbedding(imageToConvert);
+export const convertFromBuffer = async (
+  imageToConvert: Buffer
+): Promise<Embedding> => await convertBufferToEmbedding(imageToConvert);
