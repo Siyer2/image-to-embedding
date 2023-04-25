@@ -30,15 +30,8 @@
     "node": ">=12.0"
   },
   "keywords": [
-    "boilerplate",
-    "template",
-    "typescript",
-    "vscode",
-    "jest",
-    "husky",
-    "commitizen",
-    "semantic-release",
-    "codecov"
+    "embedding",
+    "vector"
   ],
   "bugs": {
     "url": "https://github.com/Siyer2/image-to-embedding/issues"
